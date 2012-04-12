@@ -439,25 +439,95 @@ var greens = {
   }
 };
 
-// // yellows
-// ivory 1 (ivory)    ivory 1 (ivory) #FFFFF0 255 255 240 15794175
-// beige    beige #F5F5DC 245 245 220 14480885
-// lightyellow 1 (lightyellow)    lightyellow 1 (lightyellow) #FFFFE0 255 255 224 14745599
-// lightgoldenrodyellow   lightgoldenrodyellow  #FAFAD2 250 250 210 13826810
-// yellow 1 (yellow*)   yellow 1 (yellow*)  #FFFF00 255 255 0 65535
-// warmgrey   warmgrey  #808069 128 128 105 6914176
-// olive*   olive*  #808000 128 128 0 32896
-// darkkhaki    darkkhaki #BDB76B 189 183 107 7059389
-// khaki    khaki #F0E68C 240 230 140 9234160
-// palegoldenrod    palegoldenrod #EEE8AA 238 232 170 11200750
-// lemonchiffon 1 (lemonchiffon)    lemonchiffon 1 (lemonchiffon) #FFFACD 255 250 205 13499135
-// lightgoldenrod 1   lightgoldenrod 1  #FFEC8B 255 236 139 9170175
-// banana   banana  #E3CF57 227 207 87  5754851
-// gold 1 (gold)    gold 1 (gold) #FFD700 255 215 0 55295
-// cornsilk 1 (cornsilk)    cornsilk 1 (cornsilk) #FFF8DC 255 248 220 14481663
-// goldenrod    goldenrod #DAA520 218 165 32  2139610
-// darkgoldenrod    darkgoldenrod #B8860B 184 134 11  755384
-// 
+// yellows
+var yellows = {
+  "0" : {
+    "color" : "ivory",
+    "hex" : "#FFFFF0",
+    "rgb" : "255, 255, 240"
+  },
+  "1" : {
+    "color" : "beige",
+    "hex" : "#F5F5DC",
+    "rgb" : "245, 245, 220"
+  },
+  "2" : {
+    "color" : "lightyellow",
+    "hex" : "#FFFFE0",
+    "rgb" : "255, 255, 224"
+  },
+  "3" : {
+    "color" : "lightgoldenrodyellow",
+    "hex" : "#FAFAD2",
+    "rgb" : "250, 250, 210"
+  },
+  "4" : {
+    "color" : "yellow",
+    "hex" : "#FFFF00",
+    "rgb" : "255, 255, 0"
+  },
+  "5" : {
+    "color" : "warmgrey",
+    "hex" : "#808069",
+    "rgb" : "128, 128, 105"
+  },
+  "6" : {
+    "color" : "olive",
+    "hex" : "#808000",
+    "rgb" : "128 128 0"
+  },
+  "7" : {
+    "color" : "darkkhaki",
+    "hex" : "#BDB76B",
+    "rgb" : "189, 183, 107"
+  },
+  "8" : {
+    "color" : "khaki",
+    "hex" : "#F0E68C",
+    "rgb" : "240, 230, 140"
+  },
+  "9" : {
+    "color" : "palegoldenrod",
+    "hex" : "#EEE8AA",
+    "rgb" : "238, 232, 170"
+  },
+  "10" : {
+    "color" : "lemonchiffon",
+    "hex" : "#FFFACD",
+    "rgb" : "255, 250, 205"
+  },
+  "11" : {
+    "color" : "lightgoldenrod",
+    "hex" : "#FFEC8B",
+    "rgb" : "255, 236, 139"
+  },
+  "12" : {
+    "color" : "banana",
+    "hex" : "#E3CF57",
+    "rgb" : "227, 207, 87"
+  },
+  "13" : {
+    "color" : "gold",
+    "hex" : "#FFD700",
+    "rgb" : "255, 215, 0"
+  },
+  "14" : {
+    "color" : "cornsilk",
+    "hex" : "#FFF8DC",
+    "rgb" : "255, 248, 220"
+  },
+  "15" : {
+    "color" : "goldenrod",
+    "hex" : "#DAA520",
+    "rgb" : "218, 165, 32"
+  },
+  "16" : {
+    "color" : "darkgoldenrod",
+    "hex" : "#B8860B",
+    "rgb" : "184, 134, 11"
+  }
+};
+
 // // oranges & browns
 // orange 1 (orange)    orange 1 (orange) #FFA500 255 165 0 42495
 // floralwhite    floralwhite #FFFAF0 255 250 240 15792895
@@ -567,15 +637,51 @@ var reds = {
   }
 };
 
-// // greys
-// white*   white*  #FFFFFF 255 255 255 16777215
-// white smoke (gray 96)    white smoke (gray 96) #F5F5F5 245 245 245 16119285
-// gainsboro    gainsboro #DCDCDC 220 220 220 14474460
-// lightgrey    lightgrey #D3D3D3 211 211 211 13882323
-// silver*    silver* #C0C0C0 192 192 192 12632256
-// darkgray   darkgray  #A9A9A9 169 169 169 11119017
-// gray*    gray* #808080 128 128 128 8421504
-// dimgray (gray 42)    dimgray (gray 42) #696969 105 105 105 6908265
-// black*   black*  #000000 0 0 0 0
-// white smoke (gray 96)    white smoke (gray 96) #F5F5F5 245 245 245 16119285
-// dimgray (gray 42)    dimgray (gray 42) #696969 105 105 105 6908265
+// greys
+var greys = {
+  "1" : {
+    "color" : "white",
+    "hex" : "#FFFFFF",
+    "rgb" : "255, 255, 255"
+  },
+  "2" : {
+    "color" : "whitesmoke",
+    "hex" : "#F5F5F5",
+    "rgb" : "245, 245, 245"
+  },
+  "3" : {
+    "color" : "gainsboro",
+    "hex" : "#DCDCDC",
+    "rgb" : "220, 220, 220"
+  },
+  "4" : {
+    "color" : "lightgrey",
+    "hex" : "#D3D3D3",
+    "rgb" : "211, 211, 211"
+  },
+  "5" : {
+    "color" : "silver",
+    "hex" : "#C0C0C0",
+    "rgb" : "192, 192, 192"
+  },
+  "6" : {
+    "color" : "darkgray",
+    "hex" : "#A9A9A9",
+    "rgb" : "169, 169, 169"
+  },
+  "7" : {
+    "color" : "gray",
+    "hex" : "",
+    "rgb" : ""
+  },
+  "8" : {
+    "color" : "dimgray",
+    "hex" : "#696969",
+    "rgb" : "105, 105, 105"
+  },
+  "9" : {
+    "color" : "black",
+    "hex" : "#000000",
+    "rgb" : "0, 0, 0"
+  }
+};

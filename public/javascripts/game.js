@@ -7,7 +7,7 @@ jQuery(function($){
       lives,
       ua = navigator.userAgent,
       event = (ua.match(/iPad/i)) ? "touchstart" : "click",
-      colorSets = [blues, reds, purples, pinks, greens],
+      colorSets = [yellows, blues, reds, purples, pinks, greens, greys, yellows],
       set;
 
   var init = function() {
@@ -22,7 +22,7 @@ jQuery(function($){
         chosenColor = $(this).css('color');
 
     if($(this).hasClass('correct')) {
-      $('li.correct').css("font-size", "400px");
+      $('li.correct').css("font-size", "350px");
       $('li:not(.correct)').css("font-size", "200px");
       score++;
       $('.result').text(score);
@@ -36,7 +36,7 @@ jQuery(function($){
         $('.result').text('Try again!');
       }
       else {
-        $('li.correct').css("font-size", "400px");
+        $('li.correct').css("font-size", "330px");
         $('li:not(.correct)').css("font-size", "200px");
         $('.result').text('High score: ' + score);
         $('.lives').fadeOut();
