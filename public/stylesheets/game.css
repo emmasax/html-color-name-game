@@ -33,6 +33,11 @@ h1 {
   width: 100%;
   text-align: center; }
 
+.twitter-share-button {
+  position: absolute;
+  top: 480px;
+  left: 350px; }
+
 .result {
   position: absolute;
   top: 430px;

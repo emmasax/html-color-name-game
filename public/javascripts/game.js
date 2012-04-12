@@ -40,7 +40,8 @@ jQuery(function($){
         $('li:not(.correct)').css("font-size", "200px");
         $('.result').text('High score: ' + score);
         $('.lives').fadeOut();
-        $('h1').addClass('new').text('Sorry, new game?');
+        $('h1').addClass('new').text('Sorry no, new game?');
+        $('.result').after('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a href="https://twitter.com/share" data-via="emmasax" data-size="large" text="I got '+score+' colours, how many can you get?" url="http://html-color-name-game.heroku.com/" data-count="none" class="twitter-share-button" data-lang="en">Tweet</a>');
         $('ul.colors li').off(event, checkAnswer);
         init();
       }
@@ -61,9 +62,6 @@ jQuery(function($){
       return getNewColor(existing, set);
     }
     else {
-      console.log('newColor=');
-      console.log(newColor);
-      // console.log(newColor["hex"]);
       return newColor;
     }
   },
@@ -77,7 +75,7 @@ jQuery(function($){
     });
     
     var colorNum = getNewColor('', set);
-    $('h1').attr("data-rgb", colorNum["rgb"]).text(colorNum["color"]);
+    $('h1').attr("data-rgb", colorNum["rgb"]).text(colorNum["color"] + '?');
     displayOptions(colorNum["hex"], set);
     $('ul.colors li').on(event, checkAnswer);
   },
@@ -89,7 +87,6 @@ jQuery(function($){
     for(i = 1; i < 4; i++) {
       var thenewcolor = getNewColor(options, set);
       options[i] = thenewcolor["hex"];
-      console.log(i + " " + options);
     }
 
     options.sort(function() { return 0.5 - Math.random() });
