@@ -639,47 +639,47 @@ var reds = {
 
 // greys
 var greys = {
-  "1" : {
+  "0" : {
     "color" : "white",
     "hex" : "#FFFFFF",
     "rgb" : "255, 255, 255"
   },
-  "2" : {
+  "1" : {
     "color" : "whitesmoke",
     "hex" : "#F5F5F5",
     "rgb" : "245, 245, 245"
   },
-  "3" : {
+  "2" : {
     "color" : "gainsboro",
     "hex" : "#DCDCDC",
     "rgb" : "220, 220, 220"
   },
-  "4" : {
+  "3" : {
     "color" : "lightgrey",
     "hex" : "#D3D3D3",
     "rgb" : "211, 211, 211"
   },
-  "5" : {
+  "4" : {
     "color" : "silver",
     "hex" : "#C0C0C0",
     "rgb" : "192, 192, 192"
   },
-  "6" : {
+  "5" : {
     "color" : "darkgray",
     "hex" : "#A9A9A9",
     "rgb" : "169, 169, 169"
   },
-  "7" : {
+  "6" : {
     "color" : "gray",
     "hex" : "",
     "rgb" : ""
   },
-  "8" : {
+  "7" : {
     "color" : "dimgray",
     "hex" : "#696969",
     "rgb" : "105, 105, 105"
   },
-  "9" : {
+  "8" : {
     "color" : "black",
     "hex" : "#000000",
     "rgb" : "0, 0, 0"
