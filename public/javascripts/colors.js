@@ -1,56 +1,51 @@
 // pinks
 var pinks = {
   "0" : {
-    "color" : "lightpink",
-    "hex" : "#FFB6C1",
-    "rgb" : "255, 182, 193"
-  },
-  "1" : {
     "color" : "pink",
     "hex" : "#FFC0CB",
     "rgb" : "255, 192, 203"
   },
-  "2" : {
+  "1" : {
     "color" : "palevioletred",
     "hex" : "#DB7093",
     "rgb" : "219, 112, 147"
   },
-  "3" : {
+  "2" : {
     "color" : "lavenderblush",
     "hex" : "#FFF0F5",
     "rgb" : "255, 240, 245"
   },
-  "4" : {
+  "3" : {
     "color" : "violetred",
     "hex" : "#FF3E96",
     "rgb" : "255, 62, 150"
   },
-  "5" : {
+  "4" : {
     "color" : "hotpink",
     "hex" : "#FF69B4",
     "rgb" : "255, 105, 180"
   },
-  "6" : {
+  "5" : {
     "color" : "raspberry",
     "hex" : "#872657",
     "rgb" : "135, 38, 87"
   },
-  "7" : {
+  "6" : {
     "color" : "deeppink",
     "hex" : "#FF1493",
     "rgb" : "255, 20, 147"
   },  
-  "8" : {
+  "7" : {
     "color" : "mediumvioletred",
     "hex" : "#C71585",
     "rgb" : "199, 21, 133"
   },
-  "9" : {
+  "8" : {
     "color" : "violetred",
     "hex" : "#D02090",
     "rgb" : "208, 32, 144"
   },
-  "10" : {
+  "9" : {
     "color" : "orchid",
     "hex" : "#DA70D6",
     "rgb" : "218, 112, 214"
@@ -90,26 +85,21 @@ var purples = {
     "rgb" : "186, 85, 211"
   },
   "6" : {
-    "color" : "darkviolet",
-    "hex" : "#9400D3",
-    "rgb" : "148, 0, 211"
-  },
-  "7" : {
     "color" : "darkorchid",
     "hex" : "#9932CC",
     "rgb" : "153, 50, 204"
   },
-  "8" : {
+  "7" : {
     "color" : "indigo",
     "hex" : "#4B0082",
     "rgb" : "75, 0, 130"
   },
-  "9" : {
+  "8" : {
     "color" : "blueviolet",
     "hex" : "#8A2BE2",
     "rgb" : "138, 43, 226"
   },
-  "10" : {
+  "9" : {
     "color" : "purple",
     "hex" : "#9B30FF",
     "rgb" : "155, 48, 255"
@@ -332,121 +322,121 @@ var greens = {
     "hex" : "#00C78C",
     "rgb" : "0, 199, 140"
   },
-  "8" : {
+  "7" : {
     "color" : "aquamarine",
     "hex" : "#7FFFD4",
     "rgb" : "127, 255, 212"
   },
-  "9" : {
+  "8" : {
     "color" : "mediumspringgreen",
     "hex" : "#00FA9A",
     "rgb" : "0, 250, 154"
   },
-  "10" : {
+  "9" : {
     "color" : "mintcream",
     "hex" : "#F5FFFA",
     "rgb" : "245, 255, 250"
   },
-  "11" : {
+  "10" : {
     "color" : "springgreen",
     "hex" : "#00FF7F",
     "rgb" : "0, 255, 127"
   },
-  "12" : {
+  "11" : {
     "color" : "mediumseagreen",
     "hex" : "#3CB371",
     "rgb" : "60, 179, 113"
   },
-  "13" : {
+  "12" : {
     "color" : "seagreen",
     "hex" : "#54FF9F",
     "rgb" : "84, 255, 159"
   },
-  "14" : {
+  "13" : {
     "color" : "emeraldgreen",
     "hex" : "#00C957",
     "rgb" : "0, 201, 87"
   },
-  "15" : {
+  "14" : {
     "color" : "mint",
     "hex" : "#BDFCC9",
     "rgb" : "189, 252, 201"
   },
-  "16" : {
+  "15" : {
     "color" : "cobaltgreen",
     "hex" : "#3D9140",
     "rgb" : "61, 145, 64"
   },
-  "17" : {
+  "16" : {
     "color" : "honeydew",
     "hex" : "#F0FFF0",
     "rgb" : "240, 255, 240"
   },
-  "18" : {
+  "17" : {
     "color" : "darkseagreen",
     "hex" : "#8FBC8F",
     "rgb" : "143, 188, 143"
   },
-  "19" : {
+  "18" : {
     "color" : "palegreen",
     "hex" : "#98FB98",
     "rgb" : "152, 251, 152"
   },
-  "20" : {
+  "19" : {
     "color" : "limegreen",
     "hex" : "#32CD32",
     "rgb" : "50, 205, 50"
   },
-  "21" : {
+  "20" : {
     "color" : "forestgreen",
     "hex" : "#228B22",
     "rgb" : "34, 139, 34"
   },
-  "22" : {
+  "21" : {
     "color" : "lime",
     "hex" : "#00FF00",
     "rgb" : "0, 255, 0"
   },
-  "23" : {
+  "22" : {
     "color" : "green",
     "hex" : "#008000",
     "rgb" : "0, 128, 0"
   },
-  "24" : {
+  "23" : {
     "color" : "darkgreen",
     "hex" : "#006400",
     "rgb" : "0, 100, 0"
   },
-  "25" : {
+  "24" : {
     "color" : "sapgreen",
     "hex" : "#308014",
     "rgb" : "48, 128, 20"
   },
-  "26" : {
+  "25" : {
     "color" : "lawngreen",
     "hex" : "#7CFC00",
     "rgb" : "124, 252, 0"
   },
-  "27" : {
+  "26" : {
     "color" : "chartreuse",
     "hex" : "#7FFF00",
     "rgb" : "127, 255, 0"
   },
-  "28" : {
+  "27" : {
     "color" : "greenyellow",
     "hex" : "#ADFF2F",
     "rgb" : "173, 255, 47"
   },
-  "29" : {
+  "28" : {
     "color" : "darkolivegreen",
     "hex" : "#556B2F",
     "rgb" : "85, 107, 47"
   },
-  "30" : {
+  "29" : {
     "color" : "olivedrab",
     "hex" : "#6B8E23",
     "rgb" : "107, 142, 35"
-  },
+  }
 };
 
 // // yellows
@@ -536,46 +526,41 @@ var reds = {
     "rgb" : "188, 143, 143"
   },
   "5" : {
-    "color" : "lightcoral",
-    "hex" : "#F08080",
-    "rgb" : "240, 128, 128"
-  },
-  "6" : {
     "color" : "indianred",
     "hex" : "#CD5C5C",
     "rgb" : "205, 92, 92"
   },
-  "7" : {
+  "6" : {
     "color" : "brown",
     "hex" : "#A52A2A",
     "rgb" : "165, 42, 42"
   },
-  "8" : {
+  "7" : {
     "color" : "firebrick",
     "hex" : "#B22222",
     "rgb" : "178, 34, 34"
   },
-  "9" : {
+  "8" : {
     "color" : "red",
     "hex" : "#FF0000",
     "rgb" : "255, 0, 0"
   },
-  "10" : {
+  "9" : {
     "color" : "darkred",
     "hex" : "#8B0000",
     "rgb" : "139, 0, 0"
   },
-  "11" : {
+  "10" : {
     "color" : "indian red",
     "hex" : "#B0171F",
     "rgb" : "176, 23, 31"
   },
-  "12" : {
+  "11" : {
     "color" : "crimson",
     "hex" : "#DC143C",
     "rgb" : "220, 20, 60"
   },
-  "13" : {
+  "12" : {
     "color" : "maroon",
     "hex" : "#800000",
     "rgb" : "128, 0, 0"

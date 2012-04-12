@@ -27,7 +27,6 @@ jQuery(function($){
       score++;
       $('.result').text(score);
       $('h1').addClass('next').text('Correct, next?');
-      
       $('ul.colors li').off(event, checkAnswer);
     }
     else {
@@ -39,7 +38,7 @@ jQuery(function($){
       else {
         $('li.correct').css("font-size", "400px");
         $('li:not(.correct)').css("font-size", "200px");
-        $('.result').text('High score: '+score);
+        $('.result').text('High score: ' + score);
         $('.lives').fadeOut();
         $('h1').addClass('new').text('Sorry, new game?');
         $('ul.colors li').off(event, checkAnswer);
@@ -50,11 +49,21 @@ jQuery(function($){
   
   getNewColor = function(existing, set) {
     var newColor = colorSets[set][Math.floor(Math.random() * (numColors-1))];
+    var exists = false;
+
+    $.each(existing, function(i, v) {
+      if(newColor["hex"] == v) {
+        exists = true;
+      }
+    });
     
-    if(newColor["hex"] == existing) {
-      getNewColor(existing, set);
+    if(exists) {
+      return getNewColor(existing, set);
     }
     else {
+      console.log('newColor=');
+      console.log(newColor);
+      // console.log(newColor["hex"]);
       return newColor;
     }
   },
@@ -66,7 +75,6 @@ jQuery(function($){
     $.each(colorSets[set], function() {
       numColors++;
     });
-    // console.log(set + " " + numColors);
     
     var colorNum = getNewColor('', set);
     $('h1').attr("data-rgb", colorNum["rgb"]).text(colorNum["color"]);
@@ -75,8 +83,14 @@ jQuery(function($){
   },
   
   displayOptions = function(colorNum, set) {
-    var options = [colorNum, (getNewColor(colorNum, set))["hex"], (getNewColor(colorNum, set))["hex"], (getNewColor(colorNum, set))["hex"]],
+    var options = [colorNum],
         count = 0;
+
+    for(i = 1; i < 4; i++) {
+      var thenewcolor = getNewColor(options, set);
+      options[i] = thenewcolor["hex"];
+      console.log(i + " " + options);
+    }
 
     options.sort(function() { return 0.5 - Math.random() });
     $.each(options, function(i, v) {
@@ -88,8 +102,7 @@ jQuery(function($){
     });
     showColor(count);
     setInterval(function() { count++; if (count < 4) { showColor(count); } }, 250);
-  
-    
+
   },
   
   showColor = function(count) {

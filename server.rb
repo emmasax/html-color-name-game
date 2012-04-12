@@ -31,3 +31,7 @@ end
 get '/' do
   haml :'index.html'
 end
+
+get '/timer' do
+  haml :'timer.html'
+end
