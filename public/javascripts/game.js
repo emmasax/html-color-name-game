@@ -7,10 +7,29 @@ jQuery(function($){
       lives,
       ua = navigator.userAgent,
       event = (ua.match(/iPad/i)) ? "touchstart" : "click",
-      colorSets = [yellows, blues, reds, purples, pinks, greens, greys, yellows],
-      set;
+      colorSets = [yellows, blues, reds, purples, pinks, greens, greys],
+      set,
+      viewportheight,
+      viewportwidth,
+      halfviewport;
 
+  viewportheight = window.innerHeight;
+  viewportwidth = window.innerWidth;
+  halfviewport = viewportheight / 2;
+  
   var init = function() {
+    var bodyHeight = viewportheight-50;
+    if(bodyHeight < 530) {
+      bodyHeight = 530;
+      halfviewport = 280;
+    }
+
+    $('body').css('height', bodyHeight+'px');
+    $('.lives').css('top', (halfviewport-70)+'px'); //310
+    $('h1').css('top', (halfviewport-30)+'px'); //350
+    $('.result').css('top', (halfviewport+50)+'px'); //430
+    $('.tweet-this').css('top', (halfviewport+130)+'px').css('left', ((viewportwidth/2)-30)+'px');
+        
     score = 0;
     numColors = 0;
     lives = 3;
@@ -39,9 +58,11 @@ jQuery(function($){
         $('li.correct').css("font-size", "330px");
         $('li:not(.correct)').css("font-size", "200px");
         $('.result').text('High score: ' + score);
-        $('.lives').fadeOut();
-        $('h1').addClass('new').text('Sorry no, new game?');
-        $('.result').after('<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><a href="https://twitter.com/share" data-via="emmasax" data-size="large" text="I got '+score+' colours, how many can you get?" url="http://html-color-name-game.heroku.com/" data-count="none" class="twitter-share-button" data-lang="en">Tweet</a>');
+        if(score > 1) {
+          $('.result').after('<a class="tweet-this" href="https://twitter.com/intent/tweet?source=webclient&text=I+got+'+score+'+colours+right!+Can+you+beat+me?+http%3A%2F%2Fhtml-color-name-game.heroku.com/">Tweet this</a>');
+        }        
+        $('.lives').hide();
+        $('h1').addClass('new').text('Sorry no! New game?');
         $('ul.colors li').off(event, checkAnswer);
         init();
       }
@@ -49,7 +70,7 @@ jQuery(function($){
   },
   
   getNewColor = function(existing, set) {
-    var newColor = colorSets[set][Math.floor(Math.random() * (numColors-1))];
+    var newColor = colorSets[set][Math.floor(Math.random() * (numColors))];
     var exists = false;
 
     $.each(existing, function(i, v) {
@@ -68,7 +89,7 @@ jQuery(function($){
   
   chooseQuestion = function() {
     // get color set
-    set = Math.floor(Math.random() * (colorSets.length-1));
+    set = Math.floor(Math.random() * (colorSets.length));
     numColors = 0;
     $.each(colorSets[set], function() {
       numColors++;

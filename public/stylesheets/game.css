@@ -6,16 +6,14 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   position: relative;
   background-color: #cae1ff;
-  width: 768px;
-  height: 768px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-width: 510px; }
 
 h1 {
   text-align: center;
   color: #444444;
   font-size: 52px;
   position: absolute;
-  top: 350px;
   width: 100%;
   cursor: pointer;
   z-index: 10;
@@ -28,19 +26,19 @@ h1 {
 .lives {
   font-size: 20px;
   position: absolute;
-  top: 310px;
   display: none;
   width: 100%;
   text-align: center; }
 
-.twitter-share-button {
+.tweet-this {
+  background: url(../images/twitter.png) no-repeat 0 0;
   position: absolute;
-  top: 480px;
-  left: 350px; }
+  width: 38px;
+  height: 38px;
+  text-indent: -999em; }
 
 .result {
   position: absolute;
-  top: 430px;
   width: 100%;
   text-align: center;
   font-size: 30px; }
@@ -54,17 +52,17 @@ ul.colors li, ul.setup li {
   font-size: 300px;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.6); }
   ul.colors li.no0, ul.setup li.no0 {
-    top: 30px;
-    left: 30px; }
+    top: 20px;
+    left: 20px; }
   ul.colors li.no1, ul.setup li.no1 {
-    top: 30px;
-    right: 30px; }
+    top: 20px;
+    right: 20px; }
   ul.colors li.no2, ul.setup li.no2 {
-    bottom: 30px;
-    left: 30px; }
+    bottom: 20px;
+    left: 20px; }
   ul.colors li.no3, ul.setup li.no3 {
-    bottom: 30px;
-    right: 30px; }
+    bottom: 20px;
+    right: 20px; }
 
 ul.colors li {
   display: none;
