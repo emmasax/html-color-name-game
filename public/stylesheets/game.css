@@ -37,6 +37,17 @@ h1 {
   height: 38px;
   text-indent: -999em; }
 
+footer {
+  position: absolute;
+  display: block;
+  width: 100%;
+  color: #333333;
+  top: 10px;
+  font-size: 14px;
+  text-align: center; }
+  footer a {
+    color: #333333; }
+
 .result {
   position: absolute;
   width: 100%;

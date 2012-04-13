@@ -29,7 +29,8 @@ jQuery(function($){
     $('h1').css('top', (halfviewport-30)+'px'); //350
     $('.result').css('top', (halfviewport+50)+'px'); //430
     $('.tweet-this').css('top', (halfviewport+130)+'px').css('left', ((viewportwidth/2)-30)+'px');
-        
+    
+    
     score = 0;
     numColors = 0;
     lives = 3;
@@ -57,10 +58,9 @@ jQuery(function($){
       else {
         $('li.correct').css("font-size", "330px");
         $('li:not(.correct)').css("font-size", "200px");
-        $('.result').text('High score: ' + score);
-        if(score > 1) {
-          $('.result').after('<a class="tweet-this" href="https://twitter.com/intent/tweet?source=webclient&text=I+got+'+score+'+colours+right!+Can+you+beat+me?+http%3A%2F%2Fhtml-color-name-game.heroku.com/">Tweet this</a>');
-        }        
+        $('.result')
+          .text('High score: ' + score)
+          .after('<a class="tweet-this" href="https://twitter.com/intent/tweet?source=webclient&text=I+got+'+score+'+colours+right!+Can+you+beat+me?+http%3A%2F%2Fhtml-color-name-game.heroku.com/">Tweet this</a>');
         $('.lives').hide();
         $('h1').addClass('new').text('Sorry no! New game?');
         $('ul.colors li').off(event, checkAnswer);
