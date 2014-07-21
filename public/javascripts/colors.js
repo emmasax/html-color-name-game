@@ -1,4 +1,4 @@
-// pinks
+// 0 pinks
 var pinks = {
   "0" : {
     "color" : "pink",
@@ -52,7 +52,7 @@ var pinks = {
   }
 }; 
 
-// purples
+// 1 purples
 var purples = {
   "0" : {
     "color" : "thistle",
@@ -111,7 +111,7 @@ var purples = {
   }
 }; 
 
-// blues
+// 2 blues
 var blues = {
   "0" : {
     "color" : "darkslateblue",
@@ -285,7 +285,7 @@ var blues = {
   }
 };
 
-// greens
+// 3 greens
 var greens = {
   "0" : {
     "color" : "teal",
@@ -439,7 +439,7 @@ var greens = {
   }
 };
 
-// yellows
+// 4 yellows
 var yellows = {
   "0" : {
     "color" : "ivory",
@@ -525,50 +525,184 @@ var yellows = {
     "color" : "darkgoldenrod",
     "hex" : "#B8860B",
     "rgb" : "184, 134, 11"
+  },
+  "17" : {
+    "color" : "cadmiumyellow",
+    "hex" : "#FF9912",
+    "rgb" : "255 153 18"
   }
 };
 
-// // oranges & browns
-// orange 1 (orange)    orange 1 (orange) #FFA500 255 165 0 42495
+// 5 oranges & browns
+var oranges = {
+  "0" : {
+    "color" : "orange",
+    "hex" : "#FFA500",
+    "rgb" : "255, 165, 0"
+  },
+  "1" : {
+    "color" : "wheat",
+    "hex" : "#F5DEB3",
+    "rgb" : "245, 222, 179"
+  },
+  "2" : {
+    "color" : "moccasin",
+    "hex" : "#FFE4B5",
+    "rgb" : "255, 228, 181"
+  },
+  "3" : {
+    "color" : "tan",
+    "hex" : "#D2B48C",
+    "rgb" : "210, 180, 140"
+  },
+  "4" : {
+    "color" : "brick",
+    "hex" : "#9C661F",
+    "rgb" : "156, 102, 31"
+  },
+  "5" : {
+    "color" : "burlywood",
+    "hex" : "#DEB887",
+    "rgb" : "222, 184, 135"
+  },
+  "6" : {
+    "color" : "bisque",
+    "hex" : "#FFE4C4",
+    "rgb" : "255, 228, 196"
+  },
+  "7" : {
+    "color" : "carrot",
+    "hex" : "#ED9121",
+    "rgb" : "237, 145, 33"
+  },
+  "8" : {
+    "color" : "brown",
+    "hex" : "#A52A2A",
+    "rgb" : "165, 42, 42"
+  },
+  "9" : {
+    "color" : "melon",
+    "hex" : "#E3A869",
+    "rgb" : "227, 168, 105"
+  },
+  "10" : {
+    "color" : "darkorange",
+    "hex" : "#FF8C00",
+    "rgb" : "255, 140, 0"
+  },
+  "11" : {
+    "color" : "orange",
+    "hex" : "#FF8000",
+    "rgb" : "255, 128, 0"
+  },
+  "12" : {
+    "color" : "tan",
+    "hex" : "#FFA54F",
+    "rgb" : "255, 165, 79"
+  },
+  "13" : {
+    "color" : "linen",
+    "hex" : "#FAF0E6",
+    "rgb" : "250, 240, 230"
+  },
+  "14" : {
+    "color" : "peachpuff",
+    "hex" : "#FFDAB9",
+    "rgb" : "255, 218, 185"
+  },
+  "15" : {
+    "color" : "seashell",
+    "hex" : "#FFF5EE",
+    "rgb" : "255, 245, 238"
+  },
+  "16" : {
+    "color" : "sandybrown",
+    "hex" : "#F4A460",
+    "rgb" : "244, 164, 96"
+  },
+  "17" : {
+    "color" : "rawsienna",
+    "hex" : "#C76114",
+    "rgb" : "199, 97, 20"
+  },
+  "18" : {
+    "color" : "chocolate",
+    "hex" : "#D2691E",
+    "rgb" : "210, 105, 30"
+  },
+  "19" : {
+    "color" : "ivoryblack",
+    "hex" : "#292421",
+    "rgb" : "41, 36, 33"
+  },
+  "20" : {
+    "color" : "flesh",
+    "hex" : "#FF7D40",
+    "rgb" : "255, 125, 64"
+  },
+  "21" : {
+    "color" : "cadmiumorange",
+    "hex" : "#FF6103",
+    "rgb" : "255, 97, 3"
+  },
+  "22" : {
+    "color" : "burntsienna",
+    "hex" : "#8A360F",
+    "rgb" : "138, 54, 15"
+  },
+  "23" : {
+    "color" : "sienna",
+    "hex" : "#A0522D",
+    "rgb" : "160, 82, 45"
+  },
+  "24" : {
+    "color" : "lightsalmon",
+    "hex" : "#FFA07A",
+    "rgb" : "255, 160, 122"
+  },
+  "25" : {
+    "color" : "coral",
+    "hex" : "#FF7F50",
+    "rgb" : "255, 127, 80"
+  },
+  "26" : {
+    "color" : "orangered",
+    "hex" : "#FF4500",
+    "rgb" : "255, 69, 0"
+  },
+  "27" : {
+    "color" : "sepia",
+    "hex" : "#5E2612",
+    "rgb" : "94, 38, 18"
+  },
+  "28" : {
+    "color" : "darksalmon",
+    "hex" : "#E9967A",
+    "rgb" : "233, 150, 122"
+  },
+  "29" : {
+    "color" : "coral",
+    "hex" : "#FF7256",
+    "rgb" : "255, 114, 86"
+  },
+  "30" : {
+    "color" : "burntumber",
+    "hex" : "#8A3324",
+    "rgb" : "138, 51, 36"
+  }
+};
+
+// whites
 // floralwhite    floralwhite #FFFAF0 255 250 240 15792895
 // oldlace    oldlace #FDF5E6 253 245 230 15136253
-// wheat    wheat #F5DEB3 245 222 179 11788021
-// moccasin   moccasin  #FFE4B5 255 228 181 11920639
 // papayawhip   papayawhip  #FFEFD5 255 239 213 14020607
 // blanchedalmond   blanchedalmond  #FFEBCD 255 235 205 13495295
 // navajowhite 1 (navajowhite)    navajowhite 1 (navajowhite) #FFDEAD 255 222 173 11394815
 // eggshell   eggshell  #FCE6C9 252 230 201 13231868
-// tan    tan #D2B48C 210 180 140 9221330
-// brick    brick #9C661F 156 102 31  2057884
-// cadmiumyellow    cadmiumyellow #FF9912 255 153 18  1219071
 // antiquewhite   antiquewhite  #FAEBD7 250 235 215 14150650
-// burlywood    burlywood #DEB887 222 184 135 8894686
-// bisque 1 (bisque)    bisque 1 (bisque) #FFE4C4 255 228 196 12903679
-// melon    melon #E3A869 227 168 105 6924515
-// carrot   carrot  #ED9121 237 145 33  2200045
-// darkorange   darkorange  #FF8C00 255 140 0 36095
-// orange   orange  #FF8000 255 128 0 33023
-// tan 1    tan 1 #FFA54F 255 165 79  5219839
-// linen    linen #FAF0E6 250 240 230 15134970
-// peachpuff 1 (peachpuff)    peachpuff 1 (peachpuff) #FFDAB9 255 218 185 12180223
-// seashell 1 (seashell)    seashell 1 (seashell) #FFF5EE 255 245 238 15660543
-// sandybrown   sandybrown  #F4A460 244 164 96  6333684
-// rawsienna    rawsienna #C76114 199 97  20  1335751
-// chocolate    chocolate #D2691E 210 105 30  1993170
-// ivoryblack   ivoryblack  #292421 41  36  33  2171945
-// flesh    flesh #FF7D40 255 125 64  4226559
-// cadmiumorange    cadmiumorange #FF6103 255 97  3 221695
-// burntsienna    burntsienna #8A360F 138 54  15  997002
-// sienna   sienna  #A0522D 160 82  45  2970272
-// lightsalmon 1 (lightsalmon)    lightsalmon 1 (lightsalmon) #FFA07A 255 160 122 8036607
-// coral    coral #FF7F50 255 127 80  5275647
-// orangered 1 (orangered)    orangered 1 (orangered) #FF4500 255 69  0 17919
-// sepia    sepia #5E2612 94  38  18  1189470
-// darksalmon   darksalmon  #E9967A 233 150 122 8034025
-// coral 1    coral 1 #FF7256 255 114 86  5665535
-// burntumber   burntumber  #8A3324 138 51  36  2372490
 
-// reds
+
+// 6 reds
 var reds = {
   "0" : {
     "color" : "tomato",
@@ -601,43 +735,38 @@ var reds = {
     "rgb" : "205, 92, 92"
   },
   "6" : {
-    "color" : "brown",
-    "hex" : "#A52A2A",
-    "rgb" : "165, 42, 42"
-  },
-  "7" : {
     "color" : "firebrick",
     "hex" : "#B22222",
     "rgb" : "178, 34, 34"
   },
-  "8" : {
+  "7" : {
     "color" : "red",
     "hex" : "#FF0000",
     "rgb" : "255, 0, 0"
   },
-  "9" : {
+  "8" : {
     "color" : "darkred",
     "hex" : "#8B0000",
     "rgb" : "139, 0, 0"
   },
-  "10" : {
+  "9" : {
     "color" : "indian red",
     "hex" : "#B0171F",
     "rgb" : "176, 23, 31"
   },
-  "11" : {
+  "10" : {
     "color" : "crimson",
     "hex" : "#DC143C",
     "rgb" : "220, 20, 60"
   },
-  "12" : {
+  "11" : {
     "color" : "maroon",
     "hex" : "#800000",
     "rgb" : "128, 0, 0"
   }
 };
 
-// greys
+// 7 greys
 var greys = {
   "0" : {
     "color" : "white",

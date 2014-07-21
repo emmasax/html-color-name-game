@@ -7,7 +7,7 @@ jQuery(function($){
       lives,
       ua = navigator.userAgent,
       event = (ua.match(/iPad/i)) ? "touchstart" : "click",
-      colorSets = [yellows, blues, reds, purples, pinks, greens, greys],
+      colorSets = [yellows, blues, reds, purples, pinks, greens, greys, oranges],
       set,
       viewportheight,
       viewportwidth,
@@ -93,11 +93,14 @@ jQuery(function($){
   
   chooseQuestion = function() {
     // get color set
-    set = Math.floor(Math.random() * (colorSets.length));
+    // set = Math.floor(Math.random() * (colorSets.length));
+    set = Math.floor(Math.random()*(colorSets.length));
     numColors = 0;
     $.each(colorSets[set], function() {
       numColors++;
     });
+    
+    console.log("max = " + colorSets.length + " current set = " + set);
     
     var colorNum = getNewColor('', set);
     $('h1').attr("data-rgb", colorNum["rgb"]).text(colorNum["color"] + '?');
