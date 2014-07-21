@@ -7,17 +7,19 @@ body {
   position: relative;
   background-color: #cae1ff;
   margin: 0 auto;
-  min-width: 510px; }
+  color: #444;
+   }
 
 h1 {
   text-align: center;
-  color: #444444;
-  font-size: 52px;
-  position: absolute;
+/*  font-size: 52px;*/
+  font-size: 25px;
+/*  position: absolute;*/
+  padding-top: 50px;
   width: 100%;
   cursor: pointer;
   z-index: 10;
-  text-shadow: 2px 2px rgba(255, 255, 255, 0.6); }
+  }
   h1 span {
     font-size: 28px;
     font-weight: normal;
@@ -26,7 +28,6 @@ h1 {
 .lives {
   font-size: 20px;
   position: absolute;
-  display: none;
   width: 100%;
   text-align: center; }
 
@@ -52,17 +53,30 @@ footer {
   position: absolute;
   width: 100%;
   text-align: center;
-  font-size: 30px; }
+  font-size: 20px; }
 
+ul.colors, ul.setup {
+/*  width: 95%;*/
+  margin: 0 auto;
+  max-width: 500px;
+  
+}
 ul.colors li, ul.setup li {
   list-style-type: none;
   line-height: 0.8;
-  position: absolute;
+/*  position: absolute;*/
+  width: 46%;
+  height: 200px;
+  margin: 0 2%;
+  float: left;
   color: #333333;
   z-index: 5;
-  font-size: 300px;
+  cursor: pointer;
+/*  font-size: 250px;*/
+  font-size: 200px;
+  text-align: center;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.6); }
-  ul.colors li.no0, ul.setup li.no0 {
+/*  ul.colors li.no0, ul.setup li.no0 {
     top: 20px;
     left: 20px; }
   ul.colors li.no1, ul.setup li.no1 {
@@ -74,10 +88,11 @@ ul.colors li, ul.setup li {
   ul.colors li.no3, ul.setup li.no3 {
     bottom: 20px;
     right: 20px; }
+*/  
 
 ul.colors li {
   display: none;
-  -webkit-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.1s ease-in;
   transition-property: font-size;
   transition-duration: 1s;
   transition-timing-function: ease-in-out; }

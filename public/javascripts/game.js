@@ -25,15 +25,18 @@ jQuery(function($){
     }
 
     $('body').css('height', bodyHeight+'px');
-    $('.lives').css('top', (halfviewport-70)+'px'); //310
+    // $('.lives').css('top', (halfviewport-70)+'px'); //310
+    $('.lives').css('top', '230px'); //310
     $('h1').css('top', (halfviewport-30)+'px'); //350
-    $('.result').css('top', (halfviewport+50)+'px'); //430
-    $('.tweet-this').css('top', (halfviewport+130)+'px').css('left', ((viewportwidth/2)-30)+'px');
-    
-    
+    // $('.result').css('top', (halfviewport+50)+'px'); //430
+    $('.result').css('top', '260px'); //430
+    // $('.tweet-this').css('top', (halfviewport+130)+'px').css('left', ((viewportwidth/2)-30)+'px');
+    $('.tweet-this').css('top', '460px').css('left', ((viewportwidth/2)-30)+'px');
+
     score = 0;
     numColors = 0;
     lives = 3;
+    
   },
 
   checkAnswer = function() {
@@ -42,12 +45,13 @@ jQuery(function($){
         chosenColor = $(this).css('color');
 
     if($(this).hasClass('correct')) {
-      $('li.correct').css("font-size", "350px");
+      $('li.correct').css("font-size", "230px");
       $('li:not(.correct)').css("font-size", "200px");
       score++;
       $('.result').text(score);
       $('h1').addClass('next').text('Correct, next?');
       $('ul.colors li').off(event, checkAnswer);
+      $('h1.next').trigger(event);
     }
     else {
       lives--;
@@ -56,7 +60,7 @@ jQuery(function($){
         $('.result').text('Try again!');
       }
       else {
-        $('li.correct').css("font-size", "330px");
+        $('li.correct').css("font-size", "230px");
         $('li:not(.correct)').css("font-size", "200px");
         $('.result')
           .text('High score: ' + score)
@@ -141,13 +145,12 @@ jQuery(function($){
     $(this).removeClass('next');
   });
   
-  $('h1.start').live(event, function() {
-    $('ul.setup').fadeOut();
+  $('.start').live(event, function() {
+    $('ul.setup').remove();
     $('h1').after('<ul class="colors" />');
     chooseQuestion();
     $(this).removeClass('start');
   });
-  
   
   $(init);
   
