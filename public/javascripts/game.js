@@ -24,19 +24,20 @@ jQuery(function($){
       halfviewport = 280;
     }
 
-    $('body').css('height', bodyHeight+'px');
-    // $('.lives').css('top', (halfviewport-70)+'px'); //310
-    $('.lives').css('top', '230px'); //310
-    $('h1').css('top', (halfviewport-30)+'px'); //350
-    // $('.result').css('top', (halfviewport+50)+'px'); //430
-    $('.result').css('top', '260px'); //430
-    // $('.tweet-this').css('top', (halfviewport+130)+'px').css('left', ((viewportwidth/2)-30)+'px');
-    $('.tweet-this').css('top', '460px').css('left', ((viewportwidth/2)-30)+'px');
+    // $('body').css('height', bodyHeight+'px');
+    // // $('.lives').css('top', (halfviewport-70)+'px'); //310
+    // $('.lives').css('top', '230px'); //310
+    // $('h1').css('top', (halfviewport-30)+'px'); //350
+    // // $('.result').css('top', (halfviewport+50)+'px'); //430
+    // $('.result').css('top', '260px'); //430
+    // // $('.tweet-this').css('top', (halfviewport+130)+'px').css('left', ((viewportwidth/2)-30)+'px');
+    // $('.tweet-this').css('top', '460px').css('left', ((viewportwidth/2)-30)+'px');
 
     score = 0;
     numColors = 0;
     lives = 3;
     
+    $('.start').trigger(event);
   },
 
   checkAnswer = function() {
@@ -45,28 +46,28 @@ jQuery(function($){
         chosenColor = $(this).css('color');
 
     if($(this).hasClass('correct')) {
-      $('li.correct').css("font-size", "230px");
-      $('li:not(.correct)').css("font-size", "200px");
+      // $('li.correct').css("font-size", "230px");
+      // $('li:not(.correct)').css("font-size", "200px");
       score++;
-      $('.result').text(score);
+      $('.result').text("Score: " + score);
       $('h1').addClass('next').text('Correct, next?');
       $('ul.colors li').off(event, checkAnswer);
       $('h1.next').trigger(event);
     }
     else {
       lives--;
-      $('.lives').text(lives + ' lives left').fadeIn();
+      $('.lives').text('Lives: ' + lives).fadeIn();
       if(lives > 0) {
-        $('.result').text('Try again!');
+        $('.extra').html('No, try again');
       }
       else {
-        $('li.correct').css("font-size", "230px");
-        $('li:not(.correct)').css("font-size", "200px");
+        $('li.correct').addClass("show");
+        $('li:not(.corrent)').addClass("hide");
         $('.result')
-          .text('High score: ' + score)
-          .after('<a class="tweet-this" href="https://twitter.com/intent/tweet?source=webclient&text=I+got+'+score+'+colours+right!+Can+you+beat+me?+http%3A%2F%2Fhtml-color-name-game.heroku.com/">Tweet this</a>');
+          .html('Your high score: ' + score)
+          .after('<p><a class="tweet-this" href="https://twitter.com/intent/tweet?source=webclient&text=I+got+'+score+'+colours+right!+Can+you+beat+me?+http%3A%2F%2Fhtml-color-name-game.heroku.com/">Tweet it</a></p>');
         $('.lives').hide();
-        $('h1').addClass('new').text('Sorry no! New game?');
+        $('h1').addClass('new').text('No lives left. New game?');
         $('ul.colors li').off(event, checkAnswer);
         init();
       }
@@ -123,7 +124,7 @@ jQuery(function($){
       if(colorNum == options[i]) {
         isCorrect = 'correct';
       }
-      $('ul.colors').append('<li class="no'+i+' '+isCorrect+'" style="color: '+options[i]+'">✮</li>');
+      $('ul.colors').append('<li class="no'+i+' '+isCorrect+'"><span style="background-color: '+options[i]+'"></span></li>');
     });
     showColor(count);
     setInterval(function() { count++; if (count < 4) { showColor(count); } }, 250);
