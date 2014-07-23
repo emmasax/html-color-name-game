@@ -18,9 +18,24 @@ jQuery(function($){
   halfviewport = viewportheight / 2;
   
   var init = function() {
+    var bodyHeight = viewportheight-50;
+    if(bodyHeight < 530) {
+      bodyHeight = 530;
+      halfviewport = 280;
+    }
+
+    // $('body').css('height', bodyHeight+'px');
+    // // $('.lives').css('top', (halfviewport-70)+'px'); //310
+    // $('.lives').css('top', '230px'); //310
+    // $('h1').css('top', (halfviewport-30)+'px'); //350
+    // // $('.result').css('top', (halfviewport+50)+'px'); //430
+    // $('.result').css('top', '260px'); //430
+    // // $('.tweet-this').css('top', (halfviewport+130)+'px').css('left', ((viewportwidth/2)-30)+'px');
+    // $('.tweet-this').css('top', '460px').css('left', ((viewportwidth/2)-30)+'px');
+
     score = 0;
     numColors = 0;
-    lives = 5;
+    lives = 3;
     
     $('.start').trigger(event);
   },
@@ -31,6 +46,8 @@ jQuery(function($){
         chosenColor = $(this).css('color');
 
     if($(this).hasClass('correct')) {
+      // $('li.correct').css("font-size", "230px");
+      // $('li:not(.correct)').css("font-size", "200px");
       score++;
       $('.result').text("Score: " + score);
       $('h1').addClass('next').text('Correct, next?');
@@ -71,19 +88,20 @@ jQuery(function($){
       return getNewColor(existing, set);
     }
     else {
-      console.log("Chosen colour: " + set);
       return newColor;
     }
   },
   
   chooseQuestion = function() {
     // get color set
+    // set = Math.floor(Math.random() * (colorSets.length));
     set = Math.floor(Math.random()*(colorSets.length));
-    console.log("Chosen set: " + set);
     numColors = 0;
     $.each(colorSets[set], function() {
       numColors++;
     });
+    
+    console.log("max = " + colorSets.length + " current set = " + set);
     
     var colorNum = getNewColor('', set);
     $('h1').attr("data-rgb", colorNum["rgb"]).text(colorNum["color"] + '?');
@@ -118,12 +136,12 @@ jQuery(function($){
   };
   
   // event handlers
-  // $('h1.new').live(event, function() {
-  //   $('.result').text('');
-  //   $('ul.colors li').remove();
-  //   chooseQuestion();
-  //   $(this).removeClass('new');
-  // });
+  $('h1.new').live(event, function() {
+    $('.result').text('');
+    $('ul.colors li').remove();
+    chooseQuestion();
+    $(this).removeClass('new');
+  });
 
   $('h1.next').live(event, function() {
     $('ul.colors li').remove();
