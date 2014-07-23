@@ -124,12 +124,12 @@ jQuery(function($){
   //   chooseQuestion();
   //   $(this).removeClass('new');
   // });
-  //
-  // $('h1.next').live(event, function() {
-  //   $('ul.colors li').remove();
-  //   chooseQuestion();
-  //   $(this).removeClass('next');
-  // });
+
+  $('h1.next').live(event, function() {
+    $('ul.colors li').remove();
+    chooseQuestion();
+    $(this).removeClass('next');
+  });
   
   $('.start').live(event, function() {
     $('ul.setup').remove();
