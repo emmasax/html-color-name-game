@@ -17,24 +17,29 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 1.5em;
 }
-
+@media all and (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }  
+}
 a {
   text-decoration: none;
   color: #999;
 }
+
 .colors {
-  margin: 2em auto;
+  margin: 2em auto 0;
   overflow: hidden;
-  width: 36em;
+  width: 18em;
 }
 .colors li {
   float: left;  
   list-style-type: none;
   width: 6em;
   height: 6em;
-  margin: 0 1.5em;
+  margin: 0 1.5em 1.5em;
 }
 
 .colors li span {
@@ -56,7 +61,15 @@ a {
   height: 6em;
   width: 6em;
 }
-
+@media all and (min-width: 768px) {
+  .colors {
+    margin: 2em auto;
+    width: 36em;
+  }
+  .colors li {
+    margin: 0 1.5em
+  }
+}
 .result, .lives {
   font-weight: 300;
   font-size: 1.2em;
