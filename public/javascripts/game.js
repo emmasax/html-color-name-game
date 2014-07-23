@@ -1,7 +1,6 @@
 var game = game || {};
 
 jQuery(function($){
-  
   var numColors,
       score,
       lives,
@@ -69,7 +68,7 @@ jQuery(function($){
           .after('<p><a class="tweet-this" href="https://twitter.com/intent/tweet?source=webclient&text=I+got+'+score+'+colours+right!+Can+you+beat+me?+http%3A%2F%2Fhtml-color-name-game.heroku.com/">Tweet it</a></p>');
         $('.lives').hide();
         $('.extra').html('');      
-        $('h1').addClass('new').text('No lives left. New game?');
+        $('h1').addClass('new').text('No lives left. Refresh for a new game');
         $('ul.colors li').off(event, checkAnswer);
         init();
       }
@@ -77,6 +76,7 @@ jQuery(function($){
   },
   
   getNewColor = function(existing, set) {
+    Math.seedrandom();
     var newColor = colorSets[set][Math.floor(Math.random() * (numColors))];
     var exists = false;
 
@@ -97,6 +97,7 @@ jQuery(function($){
   chooseQuestion = function() {
     // get color set
     // set = Math.floor(Math.random() * (colorSets.length));
+    Math.seedrandom();
     set = Math.floor(Math.random()*(colorSets.length));
     numColors = 0;
     $.each(colorSets[set], function() {
@@ -119,7 +120,7 @@ jQuery(function($){
       var thenewcolor = getNewColor(options, set);
       options[i] = thenewcolor["hex"];
     }
-
+    Math.seedrandom();
     options.sort(function() { return 0.5 - Math.random() });
     $.each(options, function(i, v) {
       isCorrect = "";
