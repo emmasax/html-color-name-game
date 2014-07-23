@@ -530,6 +530,41 @@ var yellows = {
     "color" : "cadmiumyellow",
     "hex" : "#FF9912",
     "rgb" : "255 153 18"
+  },
+  "18" : {
+    "color" : "floralwhite",
+    "hex" : "#FFFAF0",
+    "rgb" : "255, 250, 240"
+  },
+  "19" : {
+    "color" : "oldlace",
+    "hex" : "#FDF5E6",
+    "rgb" : "253, 245, 230"
+  },
+  "20" : {
+    "color" : "papayawhip",
+    "hex" : "#FFEFD5",
+    "rgb" : "255, 239, 213"
+  },
+  "21" : {
+    "color" : "blanchedalmond",
+    "hex" : "#FFEBCD",
+    "rgb" : "255, 235, 205"
+  },
+  "22" : {
+    "color" : "navajowhite",
+    "hex" : "#FFDEAD",
+    "rgb" : "255, 222, 173"
+  },
+  "23" : {
+    "color" : "eggshell",
+    "hex" : "#FCE6C9",
+    "rgb" : "252, 230, 201"
+  },
+  "24" : {
+    "color" : "antiquewhite",
+    "hex" : "#FAEBD7",
+    "rgb" : "250, 235, 215"
   }
 };
 
@@ -692,15 +727,6 @@ var oranges = {
   }
 };
 
-// whites
-// floralwhite    floralwhite #FFFAF0 255 250 240 15792895
-// oldlace    oldlace #FDF5E6 253 245 230 15136253
-// papayawhip   papayawhip  #FFEFD5 255 239 213 14020607
-// blanchedalmond   blanchedalmond  #FFEBCD 255 235 205 13495295
-// navajowhite 1 (navajowhite)    navajowhite 1 (navajowhite) #FFDEAD 255 222 173 11394815
-// eggshell   eggshell  #FCE6C9 252 230 201 13231868
-// antiquewhite   antiquewhite  #FAEBD7 250 235 215 14150650
-
 
 // 6 reds
 var reds = {
@@ -800,8 +826,8 @@ var greys = {
   },
   "6" : {
     "color" : "gray",
-    "hex" : "",
-    "rgb" : ""
+    "hex" : "#808080",
+    "rgb" : "128, 128, 128"
   },
   "7" : {
     "color" : "dimgray",
