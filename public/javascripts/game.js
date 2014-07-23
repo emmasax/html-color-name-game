@@ -35,7 +35,7 @@ jQuery(function($){
 
     score = 0;
     numColors = 0;
-    lives = 3;
+    lives = 5;
     
     $('.start').trigger(event);
   },
@@ -53,6 +53,7 @@ jQuery(function($){
       $('h1').addClass('next').text('Correct, next?');
       $('ul.colors li').off(event, checkAnswer);
       $('h1.next').trigger(event);
+      $('.extra').html('');      
     }
     else {
       lives--;
@@ -67,6 +68,7 @@ jQuery(function($){
           .html('Your high score: ' + score)
           .after('<p><a class="tweet-this" href="https://twitter.com/intent/tweet?source=webclient&text=I+got+'+score+'+colours+right!+Can+you+beat+me?+http%3A%2F%2Fhtml-color-name-game.heroku.com/">Tweet it</a></p>');
         $('.lives').hide();
+        $('.extra').html('');      
         $('h1').addClass('new').text('No lives left. New game?');
         $('ul.colors li').off(event, checkAnswer);
         init();
