@@ -104,7 +104,7 @@ jQuery(function($){
       numColors++;
     });
     
-    console.log("max = " + colorSets.length + " current set = " + set);
+    // console.log("max = " + colorSets.length + " current set = " + set);
     
     var colorNum = getNewColor('', set);
     $('h1').attr("data-rgb", colorNum["rgb"]).text(colorNum["color"] + '?');
